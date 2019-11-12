@@ -1,0 +1,14 @@
+<%= render 'form' %>
+
+<p></p>
+<p>old form done manually</p>
+
+<%= form_for @restaurant do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <%= f.submit %>
+<% end %>

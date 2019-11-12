@@ -1,0 +1,10 @@
+<%= render 'form' %>
+
+<form action="/restaurants" method="post">
+  <!-- the above is found from looking at the routes page -->
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="restaurant[name]" />
+  <input type="text" name="restaurant[address]" />
+  <input type="number" name="restaurant[rating]" />
+  <input type="submit" />
+</form>

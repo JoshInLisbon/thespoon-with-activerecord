@@ -1,0 +1,32 @@
+<h1>list of rs</h1>
+
+<%= link_to 'Create new', new_restaurant_path %>
+
+<table class="table">
+  <tr>
+    <th>name</th>
+    <th>link 1</th>
+    <th>link 2</th>
+    <th>address</th>
+    <th>rating</th>
+    <th>delete</th>
+  </tr>
+
+  <% @restaurants.each do |restaurant| %>
+    <tr>
+      <td><%= restaurant[:name] %></td>
+      <td><%= link_to restaurant[:name], restaurant_path(restaurant) %></td>
+      <td><%= link_to restaurant[:name], restaurant %></td>
+      <td><%= restaurant[:address] %></td>
+      <td><%= restaurant[:rating] %></td>
+      <td><%= link_to '🥾', restaurant_path(restaurant), method: :delete %></td>
+      <!-- no path to restaurant, same path... just different verb, same for patch, put (same), delete -->
+      <!-- restaurant_path(restaurant), but default is get reequest, so just go to the page -->
+      <!-- so need to say  method: :delete -->
+    </tr>
+  <% end %>
+
+</table>
+
+
+

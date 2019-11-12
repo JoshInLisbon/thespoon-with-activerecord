@@ -1,0 +1,13 @@
+<h1><%= @restaurant.name %>
+  <%= '*' * @restaurant.rating %>
+</h1>
+
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.rating %></p>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
+<br>
+<%= link_to 'Go back to index', restaurants_path %>
+<!-- bad to use the root_path, because if you want to change the root for a promation or whatever -->
+<!-- then you will not have to refactor -->
+<!-- good to have your root page as another page too -->
